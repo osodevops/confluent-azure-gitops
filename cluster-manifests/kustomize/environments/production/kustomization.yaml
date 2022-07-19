@@ -5,4 +5,5 @@ resources:
   - ../../base
   - ../../base/confluent/schmea-registry
   - ../../base/confluent/connect
+  - ../../base/confluent/ksqldb
   - ../../base/confluent/control-centre
