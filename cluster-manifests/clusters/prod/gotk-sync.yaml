@@ -1,0 +1,35 @@
+## CONFLUENT OPERATOR
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: confluent-infra
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./cluster-manifests/kustomize/operator
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  healthChecks:
+    - apiVersion: helm.toolkit.fluxcd.io/v1beta1
+      kind: HelmRelease
+      name: confluent
+      namespace: confluent
+  validation: client
+---
+### PRODUCTION ENVIRONMENT
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: production
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: confluent-infra
+  interval: 1m
+  path: ./cluster-manifests/kustomize/environments/production
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
