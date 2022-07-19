@@ -11,7 +11,6 @@ name: "Confluent Azure GitOps Example"
 description: |-
   Fully automated Confluent Platform Demo deployed on Azure (AKS) 
 
-
 # Canonical GitHub repo
 github_repo: osodevops/confluent-azure-gitops
 
