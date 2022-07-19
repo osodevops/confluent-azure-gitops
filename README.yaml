@@ -1,0 +1,35 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: "Confluent Azure GitOps Example"
+
+# Short description of this project
+description: |-
+  Fully automated Confluent Platform Demo deployed on Azure (AKS) 
+
+
+# Canonical GitHub repo
+github_repo: osodevops/confluent-azure-gitops
+
+# How to use this project
+usage: |-
+  
+
+# Example usage
+examples: |-
+  
+
+related:
+  - name: "Terraform GitOps Example"
+    description: "A Terraform GitOps workflow showcasing how to use the TF-Controller to run your Terraform via GitOps"
+    url: "https://github.com/osodevops/terraform-gitops-example"
+  - name: "Kafka GitOps Example"
+    description: "A Kafka / Confluent GitOps workflow example for multi-env deployments with Flux, Kustomize, Helm and Confluent Operator"
+    url: "https://github.com/osodevops/kafka-gitops-examples"
+  - name: "Confluent Platform on Azure"
+    description: "Terraform Module for deploying best practice HA Confluent Platform on Azure"
+    url: "https://github.com/osodevops/terraform-azure-confluent-platform"
