@@ -16,7 +16,12 @@ github_repo: osodevops/confluent-azure-gitops
 
 # How to use this project
 usage: |-
-  
+  #### Requirements
+  * Terraform, see [here](https://www.terraform.io/)
+  * Azure-cli, see [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+  * Kubernetes CLI see [here](https://kubernetes.io/docs/tasks/tools/)
+  * Flux CLI see [here](https://fluxcd.io/docs/guides/installation/)
+  * Login to Azure `$ az login`
 
 # Example usage
 examples: |-
