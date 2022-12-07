@@ -63,7 +63,7 @@ resource "azurerm_key_vault" "base_security" {
 
 # Creating the Key by referencing the SSH private key
 resource "azurerm_key_vault_secret" "confluent_ssh_key" {
-  name         = var.ssh_private_key
+  name         = "ssh-private-key"
   value        = base64encode(tls_private_key.ssh_private_key.private_key_pem)
   key_vault_id = azurerm_key_vault.base_security.id
 }
